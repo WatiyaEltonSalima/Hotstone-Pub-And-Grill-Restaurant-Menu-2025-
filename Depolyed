@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HotStone Pub & Grill Restaurant</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: black;
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    /* Header Section */
+    header {
+      text-align: center;
+      background-color: #002b5b; /* deep navy blue */
+      color: white;
+      padding: 40px 20px;
+      border-bottom: 3px solid orange;
+    }
+
+ /* ✅ Fixed logo styling */
+ .logo {
+      display: block;
+      margin: 0 auto 10px;
+      max-width: 240px; /* Adjust for your rectangular logo */
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px; /* Slight rounding for modern look */
+    }
+
+    header img {
+      width: 120px;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      object-fit: cover;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    /* Buttons Section */
+    .menu-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      background-color: #001f3f; /* dark blue */
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .menu-buttons button {
+      background-color: black;
+      color: white;
+      border: 1px solid white; /* thinner border */
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .menu-buttons button:hover {
+      background-color: white;
+      color: black;
+      border-color: black;
+    }
+
+    /* Menu Image Sections */
+    .menu-section {
+      text-align: center;
+      margin: 30px auto;
+      padding: 10px;
+    }
+
+    .menu-section img {
+      width: 90%;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+      margin-bottom: 30px;
+    }
+
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: black;
+      color: white;
+      border: 1px solid white;
+      border-radius: 25px;
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 1001;
+    }
+
+    #backToTop.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    #backToTop:hover {
+      background-color: white;
+      color: black;
+      border-color: black;
+    }
+
+    /* Footer */
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 50px;
+      border-top: 2px solid gold;
+      box-shadow: 0 -2px 10px rgba(0, 0, 255, 0.2);
+    }
+
+    footer h2 {
+      color: gold;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      margin: 3px 0;
+    }
+
+    footer span {
+      color: orange;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        max-width: 180px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header id="top">
+    <img src="images.jpg/The Hotstone Grill.jpg" alt="Restaurant Logo" />
+    <h1>Hot Stone Pub & Grill Restaurant</h1>
+  </header>
+
+  <!-- Buttons Section -->
+  <div class="menu-buttons">
+    <button onclick="scrollToSection('menu2025')">2025 Menu</button>
+    <button onclick="scrollToSection('breakfast')">Breakfast & Starters</button>
+    <button onclick="scrollToSection('sandwiches')">Sandwiches, Burgers & Sides</button>
+    <button onclick="scrollToSection('steaks')">Steaks, Chicken & Seafood</button>
+    <button onclick="scrollToSection('pots')">Pot Dishes</button>
+    <button onclick="scrollToSection('pizza')">Pizza</button>
+    <button onclick="scrollToSection('platters')">Platters</button>
+    <button onclick="scrollToSection('salads')">Salads</button>
+    <button onclick="scrollToSection('dessert')">Desserts</button>
+  </div>
+
+  <!-- Menu Images Section -->
+  <div class="menu-section" id="menu2025">
+    <img src="images.jpg/Hotstone Pub and Grill Restaurant 2025 Menu.jpg" alt="2025 Menu">
+  </div>
+
+  <div class="menu-section" id="breakfast">
+    <img src="images.jpg/Breakfast.jpg" alt="Breakfast and Starters">
+  </div>
+
+  <div class="menu-section" id="sandwiches">
+    <img src="images.jpg/Sandwiches.jpg" alt="Sandwiches, Burgers and Sides">
+  </div>
+
+  <div class="menu-section" id="steaks">
+    <img src="images.jpg/Steaks.jpg" alt="Steaks, Chicken, Seafood, and Fish">
+  </div>
+
+  <div class="menu-section" id="pots">
+    <img src="images.jpg/Pot Dishes.jpg" alt="Pot Dishes">
+  </div>
+
+  <div class="menu-section" id="pizza">
+    <img src="images.jpg/Pizza.jpg" alt="Pizza">
+  </div>
+
+  <div class="menu-section" id="platters">
+    <img src="images.jpg/Platters.jpg" alt="Platters">
+  </div>
+
+  <div class="menu-section" id="salads">
+    <img src="images.jpg/Salads.jpg" alt="Salads">
+  </div>
+
+  <div class="menu-section" id="dessert">
+    <img src="images.jpg/Dessert.jpg" alt="Dessert">
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" onclick="scrollToTop()">↑ Top</button>
+
+  <!-- Smooth Scrolling Script -->
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const backToTop = document.getElementById("backToTop");
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+
+    function scrollToTop() {
+      document.getElementById('top').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <h2>HotStone Pub & Grill</h2>
+    <p>© 2025 HotStone Pub & Grill. All rights reserved.</p>
+    <p>Designed by <span>The WES Collective</span></p>
+  </footer>
+
+</body>
+</html>
