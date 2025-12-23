@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hotstone Pub & Grill drinks menu featuring cocktails, wine, spirits, beer and more">
+  <title>Hotstone Pub & Grill - Drinks Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <script defer src="scripts/main.js"></script>
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="spinner"></div>
+    <div class="loading-text">Loading Menu...</div>
+  </div>
+
+  <!-- Animated Background Shapes -->
+  <div class="bg-shapes">
+    <svg class="shape" width="100" height="100"><circle cx="50" cy="50" r="40"/></svg>
+    <svg class="shape" width="120" height="120"><rect x="10" y="10" width="100" height="100"/></svg>
+    <svg class="shape" width="80" height="80"><polygon points="40,10 70,70 10,70"/></svg>
+    <svg class="shape" width="90" height="90"><path d="M45 10 L80 80 L10 80 Z"/></svg>
+    <svg class="shape" width="110" height="110"><ellipse cx="55" cy="55" rx="45" ry="25"/></svg>
+  </div>
+
+  <!-- Floating Navigation -->
+  <nav class="floating-nav">
+    <a href="index.html">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="food.html">
+      <i class="fas fa-utensils"></i>
+      <span>Food</span>
+    </a>
+    <a href="drinks.html" class="active">
+      <i class="fas fa-cocktail"></i>
+      <span>Drinks</span>
+    </a>
+  </nav>
+
+
+  <!-- Header -->
+  <header id="top">
+    <button class="menu-button" onclick="toggleMenu()" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="logo-wrapper">
+      <img src="images/the-hotstone-grill.jpg" alt="Hotstone Pub & Grill Logo" class="logo-img">
+      <h1>Hotstone Pub & Grill</h1>
+    </div>
+    <button class="theme-toggle" id="themeButton" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <!-- Dropdown Menu -->
+  <nav class="dropdown-menu" id="dropdownMenu">
+    <a href="index.html">Home</a>
+    <a href="food.html">Food Menu</a>
+    <a href="drinks.html">Drinks Menu</a>
+    <button onclick="toggleSubmenu('socials')">Socials <i class="fas fa-chevron-down"></i></button>
+    <div class="submenu" id="socialsSubmenu">
+      <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a>
+    </div>
+    <button onclick="toggleSubmenu('contact')">Contact <i class="fas fa-chevron-down"></i></button>
+    <div class="submenu" id="contactSubmenu">
+      <a href="tel:+260971631423"><i class="fas fa-phone"></i> +260 971 631 423</a>
+    </div>
+  </nav>
+
+  <!-- Page Heading -->
+  <div class="page-heading">
+    <h2>🍹 Drinks Menu</h2>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <nav class="menu-buttons" aria-label="Drinks menu navigation">
+    <button onclick="scrollToSection('cocktails')" data-section="cocktails">Cocktails</button>
+    <button onclick="scrollToSection('special')" data-section="special">Special</button>
+    <button onclick="scrollToSection('mocktail')" data-section="mocktail">Mocktail</button>
+    <button onclick="scrollToSection('shooters')" data-section="shooters">Shooters</button>
+    <button onclick="scrollToSection('milkshakes')" data-section="milkshakes">Milkshakes</button>
+    <button onclick="scrollToSection('fruitshakes')" data-section="fruitshakes">Fruit Shakes</button>
+    <button onclick="scrollToSection('wine')" data-section="wine">Wine</button>
+    <button onclick="scrollToSection('champagne')" data-section="champagne">Champagne</button>
+    <button onclick="scrollToSection('whiskey')" data-section="whiskey">Whiskey</button>
+    <button onclick="scrollToSection('whiskey-shots')" data-section="whiskey-shots">Whiskey Shots</button>
+    <button onclick="scrollToSection('brandy')" data-section="brandy">Brandy</button>
+    <button onclick="scrollToSection('vodka')" data-section="vodka">Vodka</button>
+    <button onclick="scrollToSection('cognac')" data-section="cognac">Cognac</button>
+    <button onclick="scrollToSection('tequila')" data-section="tequila">Tequila</button>
+    <button onclick="scrollToSection('rum')" data-section="rum">Rum</button>
+    <button onclick="scrollToSection('liqueur')" data-section="liqueur">Liqueur</button>
+    <button onclick="scrollToSection('gin')" data-section="gin">Gin</button>
+    <button onclick="scrollToSection('beer')" data-section="beer">Beer</button>
+    <button onclick="scrollToSection('drinks')" data-section="drinks">Other Drinks</button>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Drink Sections -->
+    <section class="menu-section" id="cocktails">
+      <img src="images/drinks/cocktails-special-mocktails-shooters-milkshakes-fruitshakes.png" 
+           alt="Cocktails Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="special">
+      <img src="images/drinks/cocktails-special-mocktails-shooters-milkshakes-fruitshakes.png" 
+           alt="Special Drinks Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="mocktail">
+      <img src="images/drinks/cocktails-special-mocktails-shooters-milkshakes-fruitshakes.png" 
+           alt="Mocktail Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="shooters">
+      <img src="images/drinks/cocktails-special-mocktails-shooters-milkshakes-fruitshakes.png" 
+           alt="Shooters Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="milkshakes">
+      <img src="images/drinks/cocktails-special-mocktails-shooters-milkshakes-fruitshakes.png" 
+           alt="Milkshakes Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="fruitshakes">
+      <img src="images/drinks/cocktails-special-mocktails-shooters-milkshakes-fruitshakes.png" 
+           alt="Fruit Shakes Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="wine">
+      <img src="images/drinks/wine-champagne.png" 
+           alt="Wine Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="champagne">
+      <img src="images/drinks/wine-champagne.png" 
+           alt="Champagne Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="whiskey">
+      <img src="images/drinks/whiskey.png" 
+           alt="Whiskey Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="whiskey-shots">
+      <img src="images/drinks/whiskey-shots.png" 
+           alt="Whiskey Shots Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="brandy">
+      <img src="images/drinks/brandy-vodka-cognac-tequila-rum-liqueur-rum-gin.png" 
+           alt="Brandy Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="vodka">
+      <img src="images/drinks/brandy-vodka-cognac-tequila-rum-liqueur-rum-gin.png" 
+           alt="Vodka Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="cognac">
+      <img src="images/drinks/brandy-vodka-cognac-tequila-rum-liqueur-rum-gin.png" 
+           alt="Cognac Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="tequila">
+      <img src="images/drinks/brandy-vodka-cognac-tequila-rum-liqueur-rum-gin.png" 
+           alt="Tequila Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="rum">
+      <img src="images/drinks/brandy-vodka-cognac-tequila-rum-liqueur-rum-gin.png" 
+           alt="Rum Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="liqueur">
+      <img src="images/drinks/brandy-vodka-cognac-tequila-rum-liqueur-rum-gin.png" 
+           alt="Liqueur Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="gin">
+      <img src="images/drinks/brandy-vodka-cognac-tequila-rum-liqueur-rum-gin.png" 
+           alt="Gin Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="beer">
+      <img src="images/drinks/beer.png" 
+           alt="Beer Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+
+    <section class="menu-section" id="drinks">
+      <img src="images/drinks/drinks.png" 
+           alt="Other Drinks Menu" 
+           loading="lazy"
+           onclick="openLightbox(this)">
+    </section>
+  </main>
+
+  <!-- Call to Reserve Button -->
+  <a href="tel:+260971631423" class="call-reserve">
+    <i class="fas fa-phone-alt"></i>
+    <span>Call to Reserve</span>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">✕</button>
+    <img id="lightboxImg" src="" alt="Menu fullscreen">
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="food.html">Food Menu</a></li>
+        <li><a href="drinks.html">Drinks Menu</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <p><a href="tel:+260971631423">+260 971 631 423</a></p>
+      <p><a href="https://www.facebook.com/share/1CzLGQdsrv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook Page</a></p>
+    </div>
+
+    <div class="stack">
+      <h3>Working Hours</h3>
+      <p>Mon-Fri: 09:30 AM - 10:00 PM</p>
+      <p>Sat-Sun: 10:00 AM - 10:00 PM</p>
+    </div>
+
+    <div class="stack">
+      <h3>Developer</h3>
+      <p>Website designed by <strong>Salima Web Development Lab</strong></p>
+    </div>
+  </footer>
+
+  <div class="copyright">
+    &copy; 2025 Hotstone Pub & Grill. All rights reserved.
+  </div>
+</body>
+</html>
